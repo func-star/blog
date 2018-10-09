@@ -113,8 +113,8 @@
       <file leaf-file-name="base.styl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/hexo-theme-clean-blog/source/css/base.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="239">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -161,6 +161,7 @@
       <find>10px 2</find>
       <find>navbar-nav</find>
       <find>pre</find>
+      <find>line-he</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/themes</dir>
@@ -354,12 +355,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538989420105</updated>
       <workItem from="1538989422474" duration="9242000" />
-      <workItem from="1539048589275" duration="2312000" />
+      <workItem from="1539048589275" duration="2479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11554000" />
+    <option name="totallyTimeSpent" value="11721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="825" extended-state="0" />
@@ -749,8 +750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/hexo-theme-clean-blog/source/css/base.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="239">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
