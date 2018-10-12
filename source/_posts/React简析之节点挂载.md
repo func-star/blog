@@ -5,7 +5,7 @@ tags:
 ---
 
 #### 概述
-在 [React简析之实例化（一）](https://github.com/func-star/blog/issues/10) 中，我们将节点进行了实例化，得到了一个数据装载完整的 React 实例数据。这一节我们来介绍一下节点挂载的过程。
+在 [React简析之实例化（一）](https://github.com/func-star/blog/issues/10) 中，我们将节点进行了实例化，得到了一个数据装载完整的 `React` 实例数据。这一节我们来介绍一下节点挂载的过程。
 代码地址：[v1.1](https://github.com/func-star/blog/issues/10)
 
 ```js
@@ -118,13 +118,13 @@ mountChildren(parentNode) {
 ```
 
 #### 这里注意一个点：
-实际上在实例化过程中，我们并不会将 React 节点转化成原生节点进行实例化。React 节点转化成原生节点这一步是在节点挂载的时候完成的。
-在 React 节点挂载的过程中，我们会根据实例化好的节点信息` reactDom.create(this.currentElement)` 创建出一个真实的 原生节点（浏览器节点），然后插入 dom 结构中去。
-如果碰到 React 节点，则是先通过 render() 方法返回的 dom 模版，实例化出一份 节点实例，再进行节点挂载。
+实际上在实例化过程中，我们并不会将 `React` 节点转化成原生节点进行实例化。`React` 节点转化成原生节点这一步是在节点挂载的时候完成的。
+在 `React` 节点挂载的过程中，我们会根据实例化好的节点信息`reactDom.create(this.currentElement)` 创建出一个真实的 原生节点（浏览器节点），然后插入 `dom` 结构中去。
+如果碰到 `React` 节点，则是先通过 `render()` 方法返回的 `dom` 模版，实例化出一份 节点实例，再进行节点挂载。
 依次递归完成子节点的挂载操作。
 
 #### 合成事件绑定、属性绑定（可以先忽略）
-在 React 的节点属性中，通常以驼峰形式命名，像style属性接收的也是 JSON 对象形式，与原生节点的属性格式不同。
+在 `React` 的节点属性中，通常以驼峰形式命名，像`style`属性接收的也是 `JSON` 对象形式，与原生节点的属性格式不同。
 
 ```js
 prefixList = [
@@ -249,8 +249,8 @@ parse(node, props) {
     })
 }
 ```
-#### setState 介绍
-在理解 React 之前我们都会把 setState 当成是一个异步过程，下面见一个例子：
+#### `setState` 介绍
+在理解 `React` 之前我们都会把 `setState` 当成是一个异步过程，下面见一个例子：
 ```js
 class App extends Component {
 	state = { val: 0 }
@@ -266,12 +266,12 @@ class App extends Component {
 }
 
 ```
-从结果上看，我们很容易把 setState 当成是一个异步方法。
-其实 setState 的“异步”并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是 increment （钩子函数）的调用顺序在更新之前，导致在钩子函数中没法立马拿到更新后的值，形式了所谓的“异步”，当然可以通过第二个参数 setState(partialState, callback) 中的callback拿到更新后的结果。
-那么如何让 setState 以同步形式使用呢？
+从结果上看，我们很容易把 `setState` 当成是一个异步方法。
+其实 `setState` 的“异步”并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是 `increment`（钩子函数）的调用顺序在更新之前，导致在钩子函数中没法立马拿到更新后的值，形式了所谓的“异步”，当然可以通过第二个参数 `setState(partialState, callback)` 中的`callback`拿到更新后的结果。
+那么如何让 `setState` 以同步形式使用呢？
 
-- 用 setTimeout 的形式强制改变调用栈
-- 用原生事件绑定形式，不使用 React 的合成事件
+- 用 `setTimeout` 的形式强制改变调用栈
+- 用原生事件绑定形式，不使用 `React` 的合成事件
 
 ```js
 componentDidMount() {

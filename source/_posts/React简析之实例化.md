@@ -5,18 +5,18 @@ tags:
 ---
 
 ### 概述
-这是一个 React 原理解读的系列，将带你一步步实现一个简化版的 React。不多说废话，现在开始！！！
+这是一个 `React` 原理解读的系列，将带你一步步实现一个简化版的 `React`。不多说废话，现在开始！！！
 代码地址：[v1.0](https://github.com/func-star/mo-react/tree/v1.0)
 
 
-### React的主入口
+### `React`的主入口
 ```js
 import { render } from 'react-dom'
 ...
 render(<a>123</a>, document.getElementById('appWrapper'))
 ```
-这行代码大家肯定都非常熟悉，render() 函数是 React 最基本的方法，是整个 React 执行的开端。
-我们可以看到 render 接收两个参数，一个 dom 模版，另一个是模版插入的位置，那么 render()  具体做了哪些事情呢？
+这行代码大家肯定都非常熟悉，`render()` 函数是 `React` 最基本的方法，是整个 `React` 执行的开端。
+我们可以看到 `render` 接收两个参数，一个 `dom` 模版，另一个是模版插入的位置，那么 `render()`  具体做了哪些事情呢？
 ```js
 // ReactMount.js
 
@@ -36,13 +36,13 @@ class ReactMount {
 export default new ReactMount
 ```
 
-从代码中我们可以看到 render() 先会将接收到的 dom 结构进行一个实例化的过程，并生成一个实例对象数据结构`instance`。
-接着是对实例对象进行挂载，这一节主要是将 React 节点解析成浏览器原生节点，添加合成事件、绑定可识别属性等。这一块我们在下一节会进行讲解。
+从代码中我们可以看到 `render()` 先会将接收到的 `dom` 结构进行一个实例化的过程，并生成一个实例对象数据结构`instance`。
+接着是对实例对象进行挂载，这一节主要是将 `React` 节点解析成浏览器原生节点，添加合成事件、绑定可识别属性等。这一块我们在下一节会进行讲解。
 再接着就是节点插入。
 
 ### 下面我们来介绍一下节点实例化到底干了哪些事情
 
-在讲实例化之前，首先我们先了解一下 React 节点分为4种节点类型，分别是空节点、文本节点、原生节点（浏览器节点）以及 React 节点。
+在讲实例化之前，首先我们先了解一下 `React` 节点分为4种节点类型，分别是空节点、文本节点、原生节点（浏览器节点）以及 `React` 节点。
 根据这个我们先来定义一个数据字典，如下：
 ```js
 // constant.js
@@ -116,5 +116,5 @@ export default class ReactInstantiate {
 }
 ```
 
-至此，节点的实例化过程已经完成，我们得到一个数据装载完整的react实例数据。
+至此，节点的实例化过程已经完成，我们得到一个数据装载完整的`react`实例数据。
 这边介绍的代码并不完整，可以前往[v1.0](https://github.com/func-star/mo-react/tree/v1.0)，clone下来本地跑一遍。
