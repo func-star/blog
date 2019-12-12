@@ -1,1 +1,1 @@
-https://monajs.github.io/
+https://github.com/func-star/blog/issues
